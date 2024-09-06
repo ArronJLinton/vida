@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import Main from '../layouts/Main';
 import EmailLink from '../components/Contact/EmailLink';
 import ContactIcons from '../components/Contact/ContactIcons';
@@ -8,7 +7,7 @@ import ContactIcons from '../components/Contact/ContactIcons';
 const Contact = () => (
   <Main
     title="Contact"
-    description="Contact Michael D'Angelo via email @ hi@mldangelo.com"
+    description="Contact Arron J. Linton via email @ hi@mldangelo.com"
   >
     <article className="post" id="contact">
       <header>

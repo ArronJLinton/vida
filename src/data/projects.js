@@ -1,9 +1,8 @@
-// TODO Add a couple lines about each project
 const data = [
   {
-    title: 'Nearest Dollar',
-    subtitle: '2015 BVP Hackathon',
-    image: '/images/projects/nearestdollar.jpg',
+    title: 'Bootcampspot',
+    subtitle: 'Classroom management software for bootcamps.',
+    image: '/images/projects/bootcampspot.jpg',
     date: '2015-11-20',
     desc:
       'Built for a social impact hackathon. '
@@ -12,36 +11,39 @@ const data = [
       + 'the charity of your choice.',
   },
   {
-    title: 'Harvest',
+    title: 'Munca Technologies',
     subtitle: 'Won 3rd. place in 2015 Techcrunch Disrupt SF Hackathon',
-    link: 'https://devpost.com/software/harvest',
-    image: '/images/projects/harvest.jpg',
-    date: '2015-09-20',
+    link: 'https://www.muncatech.com/',
+    image: '/images/projects/muncatech.jpg',
+    date: '2020-12-01',
     desc:
-      'Won ~ $7000 in prizes for an advanced, low cost monitoring solution '
-      + 'for crops. Harvest was designed to catch irrigation leaks, overwatering, '
-      + 'and nutrient deficiencies at an affordable price for the developing world.',
+      'We aggregate all of your options to one app while providing partner companies and drivers more opportunities to make more money',
   },
   {
-    title: 'Space Potato',
-    subtitle: 'A kickstarter funded potato powered weather balloon.',
+    title: 'The Takedown',
+    subtitle: 'A content removal platform for uses without permission.',
     link: 'http://www.spacepotato.org',
-    image: '/images/projects/spacepotato.jpg',
-    date: '2015-06-28',
+    image: '/images/projects/takedown.jpg',
+    date: '2022-09-01',
     desc:
-      'Launched a potato battery powered weather balloon with two cameras '
-      + 'and gps transponder. Resulting photos were published in a coffee table book. '
-      + 'You can email me for a copy.',
+      'Launched a custom CRM for content removal requests. This included payment system integration with squarespace, admin portal, and user dashboard.',
   },
   {
-    title: 'Cat Detector',
+    title: 'JAST',
     subtitle: 'A convolutional neural network to classify cats! (and dogs)',
-    image: '/images/projects/catdetector.jpg',
-    date: '2015-05-15',
+    image: '/images/projects/jast.jpg',
+    date: '2019-01-01',
     desc:
-      'Trained a convolutional neural network to classify between ~ 80 cats breeds. '
-      + 'Over 60,000 cats were classified before server bills made the project too expensive '
-      + 'to continue hosting.',
+      'Roadside Assistance Application.',
+  },
+  {
+    title: 'Le Fashion Cottage',
+    subtitle: 'A convolutional neural network to classify cats! (and dogs)',
+    link: 'https://lefashioncottage.com/',
+    image: '/images/projects/lefashioncottage.jpg',
+    date: '2018-06-01',
+    desc:
+      'Womens fashion boutique.',
   },
 ];
 
