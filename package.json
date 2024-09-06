@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://mldangelo.com/",
+  "homepage": "https://arronlinton.me/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ArronJLinton/live"
+    "url": "https://github.com/ArronJLinton/vida"
   },
   "engines": {
     "node": ">=16.x"
