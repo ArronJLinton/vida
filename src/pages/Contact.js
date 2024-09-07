@@ -15,6 +15,10 @@ const Contact = () => (
           <h2>
             <Link to="/contact">Contact</Link>
           </h2>
+          <p>Whether you want to get in touch,
+            talk about a project collaboration,
+            or just say hi, I&apos;d love to hear from you.
+          </p>
         </div>
       </header>
       <div className="email-at">
