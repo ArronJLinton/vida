@@ -2,13 +2,10 @@ const data = [
   {
     title: 'Bootcampspot',
     subtitle: 'Classroom management software for bootcamps.',
+    link: 'https://bootcampspot.instructure.com',
     image: '/images/projects/bootcampspot.jpg',
     date: '2015-11-20',
-    desc:
-      'Built for a social impact hackathon. '
-      + 'NearestDollar connected to your bank accounts, credit cards, '
-      + 'or debit cards and rounded up your purchases to donate the balance to '
-      + 'the charity of your choice.',
+    desc: 'Classroom management software for bootcamps.',
   },
   {
     title: 'Munca Technologies',
@@ -17,12 +14,12 @@ const data = [
     image: '/images/projects/muncatech.jpg',
     date: '2020-12-01',
     desc:
-      'We aggregate all of your options to one app while providing partner companies and drivers more opportunities to make more money',
+      'We aggregate all of your options to one app while providing partner companies and drivers more opportunities to make more money.',
   },
   {
     title: 'The Takedown',
     subtitle: 'A content removal platform for uses without permission.',
-    link: 'http://www.spacepotato.org',
+    link: 'https://www.the-takedown.com/',
     image: '/images/projects/takedown.jpg',
     date: '2022-09-01',
     desc:
