@@ -6,13 +6,23 @@ const skills = [
   },
   {
     title: 'Node.JS',
-    competency: 5,
-    category: ['Web Development', 'Javascript'],
+    competency: 4,
+    category: ['Backend Engineering', 'Javascript'],
+  },
+  {
+    title: 'Go',
+    competency: 3,
+    category: ['Backend Engineering'],
   },
   {
     title: 'React',
-    competency: 2,
+    competency: 4,
     category: ['Web Development', 'Javascript'],
+  },
+  {
+    title: 'React Native',
+    competency: 4,
+    category: ['Javascript', 'Mobile Development'],
   },
   {
     title: 'Next.JS',
@@ -20,19 +30,9 @@ const skills = [
     category: ['Web Development', 'Javascript'],
   },
   {
-    title: 'Bash',
-    competency: 2,
-    category: ['Tools', 'Languages'],
-  },
-  {
-    title: 'Amazon Web Services',
-    competency: 4,
-    category: ['Web Development', 'Tools'],
-  },
-  {
     title: 'Heroku',
-    competency: 2,
-    category: ['Web Development', 'Tools'],
+    competency: 3,
+    category: ['Web Development', 'DevOps'],
   },
   {
     title: 'MongoDB',
@@ -51,13 +51,8 @@ const skills = [
   },
   {
     title: 'Redis',
-    competency: 3,
+    competency: 2,
     category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Data Mining',
-    competency: 3,
-    category: ['ML Engineering'],
   },
   {
     title: 'Express.JS',
@@ -65,24 +60,19 @@ const skills = [
     category: ['Web Development', 'Javascript'],
   },
   {
-    title: 'Git/Mercurial',
-    competency: 3,
-    category: ['Tools'],
-  },
-  {
     title: 'Google Cloud Compute',
     competency: 2,
-    category: ['Tools', 'Web Development'],
+    category: ['Web Development', 'DevOps'],
   },
   {
     title: 'AWS',
     competency: 3,
-    category: ['Tools', 'Web Development'],
+    category: ['Web Development', 'DevOps'],
   },
   {
     title: 'Docker',
     competency: 3,
-    category: ['Tools', 'Data Engineering'],
+    category: ['Data Engineering'],
   },
   {
     title: 'Typescript',
@@ -98,6 +88,21 @@ const skills = [
     title: 'GraphQL',
     competency: 2,
     category: ['Web Development', 'Databases'],
+  },
+  {
+    title: 'Xcode',
+    competency: 3,
+    category: ['Mobile Development'],
+  },
+  {
+    title: 'Android Studio',
+    competency: 2,
+    category: ['Mobile Development'],
+  },
+  {
+    title: 'Microsoft App Center',
+    competency: 4,
+    category: ['Mobile Development', 'DevOps'],
   },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
