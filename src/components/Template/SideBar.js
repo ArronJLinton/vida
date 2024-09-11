@@ -23,8 +23,8 @@ const SideBar = () => (
       <h2>About</h2>
       <p>
         Hi, I&apos;m Arron. I am a{' '}
-        <a href="https://icme.stanford.edu/">Lead Instructor at the University of Washington</a>, Software Engineer at 2U, and a Rutgers University Alumn{' '}
-        <a href="https://smileidentity.com">{}</a>.
+        <a href="https://www.pce.uw.edu/areas-of-study/programming-tech">Lead Instructor at the University of Washington</a>, Software Engineer at 2U, and a Rutgers University Alumni
+        <a href="https://www.rutgers.edu/">{}</a>.
       </p>
       <ul className="actions">
         <li>
