@@ -72,6 +72,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
+      - name: Check if artifact exists before deployment
+        run: |
+          until [ -d "./build" ]; do
+            echo "Waiting for artifact..."
+            sleep 5  # Wait 5 seconds before checking again
+          done
+          echo "Artifact is ready!"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
