@@ -13,10 +13,12 @@ describe('renders the app', () => {
   // mocks the fetch API used on the stats page and the about page.
   const jsonMock = jest.fn(() => Promise.resolve({}));
   const textMock = jest.fn(() => Promise.resolve(''));
-  global.fetch = jest.fn(() => Promise.resolve({
-    json: jsonMock,
-    text: textMock,
-  }));
+  global.fetch = jest.fn(() =>
+    Promise.resolve({
+      json: jsonMock,
+      text: textMock,
+    })
+  );
   // mocks the scrollTo API used when navigating to a new page.
   window.scrollTo = jest.fn();
 
@@ -47,7 +49,7 @@ describe('renders the app', () => {
   it('can navigate to /about', async () => {
     expect.assertions(7);
     const aboutLink = document.querySelector(
-      '#header > nav > ul > li:nth-child(1) > a',
+      '#header > nav > ul > li:nth-child(1) > a'
     );
     expect(aboutLink).toBeInTheDocument();
     await act(async () => {
@@ -64,7 +66,7 @@ describe('renders the app', () => {
   it('can navigate to /resume', async () => {
     expect.assertions(3);
     const contactLink = document.querySelector(
-      '#header > nav > ul > li:nth-child(2) > a',
+      '#header > nav > ul > li:nth-child(2) > a'
     );
     expect(contactLink).toBeInTheDocument();
     await act(async () => {
@@ -77,7 +79,7 @@ describe('renders the app', () => {
   it('can navigate to /projects', async () => {
     expect.assertions(3);
     const contactLink = document.querySelector(
-      '#header > nav > ul > li:nth-child(3) > a',
+      '#header > nav > ul > li:nth-child(3) > a'
     );
     expect(contactLink).toBeInTheDocument();
     await act(async () => {
@@ -105,7 +107,7 @@ describe('renders the app', () => {
   it('can navigate to /contact', async () => {
     expect.assertions(3);
     const contactLink = document.querySelector(
-      '#header > nav > ul > li:nth-child(4) > a',
+      '#header > nav > ul > li:nth-child(4) > a'
     );
     expect(contactLink).toBeInTheDocument();
     await act(async () => {
