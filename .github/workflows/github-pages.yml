@@ -22,9 +22,10 @@ jobs:
       id-token: write
     timeout-minutes: 10
     steps:
+      - name: Display Run ID
+        run: echo "The workflow run ID is ${{ github.run_id }}"
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -70,7 +71,8 @@ jobs:
         run: |
           echo "Sleeping for 10 seconds to wait for artifact to be available..."
           sleep 10  # Wait 10 seconds before proceeding
-
+      - name: Display Run ID
+        run: echo "The workflow run ID is ${{ github.run_id }}"
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v3 # Ensure using v3 of the deploy action
         with:
