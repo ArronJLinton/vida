@@ -28,17 +28,20 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-20.04
-    timeout-minutes: 10
+    timeout-minutes: 10 # Adjust if necessary
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
-      - name: Install
+
+      - name: Install dependencies
         run: npm ci
+
       - name: Build and Render
         shell: bash
         run: |
@@ -64,23 +67,15 @@ jobs:
           retry npm run predeploy
         env:
           NODE_ENV: production
-          # Remove this line if you would like to skip using google analytics
-          # REACT_APP_GA_TRACKING_ID: UA-68649021-1
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build
-      - name: Check if artifact exists before deployment
-        run: |
-          until [ -d "./build" ]; do
-            echo "Waiting for artifact..."
-            sleep 5  # Wait 5 seconds before checking again
-          done
-          echo "Artifact is ready!"
+          path: ./build # Ensure this points to your build directory
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-        with:
-          artifact_name: github-pages
