@@ -10,23 +10,16 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
     runs-on: ubuntu-20.04
     permissions:
       contents: read
-      pages: write
       actions: read
-      id-token: write
-    timeout-minutes: 10
     steps:
-      - name: Display Run ID
-        run: echo "The workflow run ID is ${{ github.run_id }}"
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup Node
+
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version-file: '.nvmrc'
@@ -59,21 +52,43 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: ./build # Ensure this matches the build output directory
+
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: build # Ensures the deploy job runs only after the build job succeeds
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Display Run ID
+        run: echo "The workflow run ID is ${{ github.run_id }}"
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+          path: ./build
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3 # Correct version (v3)
+      - name: Upload artifact for deployment
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./build # Ensure this points to the correct build directory
 
-      - name: Sleep before deploy
+      - name: Sleep before deployment
         run: |
           echo "Sleeping for 10 seconds to wait for artifact to be available..."
-          sleep 10  # Wait 10 seconds before proceeding
-      - name: Display Run ID
-        run: echo "The workflow run ID is ${{ github.run_id }}"
+          sleep 10
+
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v3 # Ensure using v3 of the deploy action
-        with:
-          artifact_name: github-pages # Ensure this matches the artifact name uploaded
+        uses: actions/deploy-pages@v3
