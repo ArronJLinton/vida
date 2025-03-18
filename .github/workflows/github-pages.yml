@@ -66,6 +66,11 @@ jobs:
         with:
           path: ./build # Ensure this points to the correct build directory
 
+      - name: Sleep before deploy
+        run: |
+          echo "Sleeping for 10 seconds to wait for artifact to be available..."
+          sleep 10  # Wait 10 seconds before proceeding
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3 # Ensure using v3 of the deploy action
