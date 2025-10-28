@@ -1,11 +1,11 @@
 {
   "name": "personal-site",
   "version": "4.0.0",
-  "homepage": "https://arronlinton.me/",
+  "homepage": "https://arronjlinton.com/",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ArronJLinton/vida.git"
+    "url": "https://github.com/ArronJLinton/personal-site.git"
   },
   "engines": {
     "node": ">=20.x"
@@ -13,9 +13,11 @@
   "scripts": {
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
+    "postbuild": "echo '✅ Build completed successfully'",
     "lint": "eslint \"**/*.js\"",
     "lint:fix": "eslint --fix \"**/*.js\"",
     "predeploy": "npm run build && react-snap",
+    "deploy": "npm run predeploy && gh-pages -d build",
     "start": "react-scripts start",
     "test": "npx jest"
   },
@@ -48,10 +50,30 @@
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "6.9.0",
     "eslint-plugin-react": "^7.35.0",
+    "gh-pages": "^6.1.1",
     "react-snap": "^1.23.0",
     "rimraf": "^6.0.1",
     "sass": "^1.77.8",
     "source-map-explorer": "^2.5.3"
+  },
+  "reactSnap": {
+    "inlineCss": true,
+    "minifyHtml": {
+      "collapseWhitespace": true,
+      "removeComments": true
+    },
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "concurrency": 1,
+    "include": [
+      "/",
+      "/about",
+      "/projects",
+      "/resume",
+      "/contact"
+    ]
   },
   "browserslist": {
     "production": [

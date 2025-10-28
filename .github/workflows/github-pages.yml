@@ -1,10 +1,11 @@
-name: Deploy static content to Pages
+name: Deploy React App to GitHub Pages
 
 on:
   push:
     branches: ['main']
   workflow_dispatch:
 
+# Prevents concurrent deployments
 concurrency:
   group: 'pages'
   cancel-in-progress: false
@@ -15,12 +16,13 @@ jobs:
     permissions:
       contents: read
       actions: read
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
@@ -28,49 +30,70 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build and Render
+      - name: Build and Pre-render with react-snap
         shell: bash
         run: |
           function retry {
             local n=1
             local max=5
-            local delay=1
+            local delay=2
             while true; do
               "$@" && break || {
                 if [[ $n -lt $max ]]; then
                   ((n++))
-                  echo "Command failed. Attempt $n/$max:"
+                  echo "⚠️  Command failed. Attempt $n/$max:"
                   sleep $delay;
                 else
-                  echo "The command has failed after $n attempts."
+                  echo "❌ The command has failed after $n attempts."
                   return 1
                 fi
               }
             done
           }
+
+          echo "🔨 Building React app with react-snap pre-rendering..."
           retry npm run predeploy
+
+          echo "✅ Build and pre-render completed successfully!"
         env:
           NODE_ENV: production
+          CI: true
+
+      - name: Verify build output
+        run: |
+          if [ ! -d "./build" ]; then
+            echo "❌ Build directory not found!"
+            exit 1
+          fi
+
+          if [ ! -f "./build/index.html" ]; then
+            echo "❌ index.html not found in build directory!"
+            exit 1
+          fi
+
+          echo "✅ Build verification passed"
+          echo "📦 Build contents:"
+          ls -la ./build
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact
-          path: ./build # Ensure this matches the build output directory
+          path: ./build
+          retention-days: 1
 
   deploy:
     runs-on: ubuntu-20.04
-    needs: build # Ensures the deploy job runs only after the build job succeeds
+    needs: build
     permissions:
       pages: write
       id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Display Run ID
-        run: echo "The workflow run ID is ${{ github.run_id }}"
 
+    steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
@@ -78,17 +101,18 @@ jobs:
           path: ./build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v4
 
-      - name: Upload artifact for deployment
+      - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./build # Ensure this points to the correct build directory
-
-      - name: Sleep before deployment
-        run: |
-          echo "Sleeping for 10 seconds to wait for artifact to be available..."
-          sleep 10
+          path: ./build
 
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deployment summary
+        run: |
+          echo "🚀 Deployment completed successfully!"
+          echo "🌐 Site URL: ${{ steps.deployment.outputs.page_url }}"
