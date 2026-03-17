@@ -6,7 +6,7 @@ import Main from '../layouts/Main';
 const Index = () => (
   <Main
     description={
-      "Arron J. Linton's personal website. New York City based Software Engineer, Lead Instructor, and Rutgers University Alumni."
+      "Arron J. Linton's personal website. New York City based Software Engineer, Solutions Engineer, and Rutgers University Alumni."
     }
   >
     <article className="post" id="index">

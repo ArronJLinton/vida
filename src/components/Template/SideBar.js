@@ -20,11 +20,13 @@ const SideBar = () => (
     </section>
 
     <section className="blurb">
-      <h2>About</h2>
       <p>
-        Hi, I&apos;m Arron. I am a{' '}
-        <a href="https://www.pce.uw.edu/areas-of-study/programming-tech">Lead Instructor at the University of Washington</a>, Software Engineer at 2U, and a Rutgers University Alumni
-        <a href="https://www.rutgers.edu/">{}</a>.
+        I Build Scalable Web, Mobile, and AI Products That Drive Real Business
+        Results
+      </p>
+      <p>
+        Full Stack Engineer | React, Node, Go | AI-Powered Systems | Founder @
+        Magistri Dev
       </p>
       <ul className="actions">
         <li>

@@ -1,9 +1,9 @@
-# Intro
-
- 
-I am Software Engineer and Lead Instructor with a passion for building innovative software solutions and mentoring aspiring developers. With extensive experience in full-stack development, I have a proven track record of delivering high-performance mobile and web applications that drive business success. As a lead instructor at the University of Washington Coding Bootcamp, I have had the opportunity to teach and guide aspiring developers, blending my technical expertise with a passion for fostering growth.
+I’m a product-focused Full Stack Engineer building scalable web and mobile applications with a focus on performance, user experience, and rapid iteration. I work across the stack with React, TypeScript, Node.js, and Go, and actively leverage AI tools and agent-based workflows to accelerate development and deliver smarter products.
 <br><br>
-My unique blend of industry experience and teaching has equipped me with a deep understanding of both the practical and educational aspects of software development. Whether I’m coding, leading a project, or teaching a class, I am driven by the challenge of solving complex problems and the satisfaction of helping others achieve their goals.
+I’ve led engineering efforts across multiple applications and run a software agency, partnering with startups and businesses to bring ideas from 0→1 and scale them in production.
 <br><br>
-If you think I can be helpful to you or your cause and would like to meet, please feel free to get in touch.
-
+Alongside my engineering work, I’ve served as a Lead Instructor at the University of Washington Coding Bootcamp, mentoring developers and helping them transition into high-impact engineering roles.
+<br><br>
+I operate at the intersection of engineering, product, and AI, and thrive in fast-moving environments where ownership and execution matter.
+<br><br>
+Let’s build something great.
