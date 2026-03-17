@@ -13,7 +13,7 @@
   grid-template-columns: 1.2fr 1fr;
   gap: 3.5em;
   align-items: center;
-  min-height: calc(100vh - 7em);
+  min-height: calc(100vh - 30em);
 }
 
 .home__copy {
@@ -38,7 +38,7 @@
 }
 
 .home__badge:before {
-  content: "";
+  content: '';
   width: 0.55em;
   height: 0.55em;
   border-radius: 999px;
@@ -107,9 +107,17 @@
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   background:
-    radial-gradient(circle at 35% 30%, rgba(46, 89, 186, 0.18), transparent 55%),
+    radial-gradient(
+      circle at 35% 30%,
+      rgba(46, 89, 186, 0.18),
+      transparent 55%
+    ),
     radial-gradient(circle at 65% 70%, rgba(60, 59, 59, 0.12), transparent 55%),
-    linear-gradient(135deg, rgba(160, 160, 160, 0.16), rgba(160, 160, 160, 0.03));
+    linear-gradient(
+      135deg,
+      rgba(160, 160, 160, 0.16),
+      rgba(160, 160, 160, 0.03)
+    );
   box-shadow:
     0 30px 80px rgba(10, 10, 10, 0.08),
     inset 0 0 0 1px _palette(border);
@@ -220,4 +228,3 @@
     gap: 0.75em;
   }
 }
-
