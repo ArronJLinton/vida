@@ -1,8 +1,16 @@
 const data = [
   {
+    title: 'Visa Connect',
+    subtitle: 'A home away from home for people living in the U.S. on a visa.',
+    link: 'https://www.visaconnectus.com/',
+    image: '/images/projects/visaconnect.png',
+    date: '2025-02-20',
+    desc: 'A community built to support visa holders for employment, social connections, and more.',
+  },
+  {
     title: 'Aquilini Wines',
     subtitle: 'Online wine showcase for Aquilini Wine Group.',
-    link: 'https://aquiliniwines.com/',
+    link: 'https://www.aquilinivineyards.com/our-vineyards',
     image: '/images/projects/aquilini-wines.png',
     date: '2025-02-20',
     desc: 'Online wine showcase for Aquilini Wine Group.',
@@ -23,14 +31,6 @@ const data = [
     image: '/images/projects/takedown.jpg',
     date: '2022-09-01',
     desc: 'Launched a custom CRM for content removal requests. This included payment system integration with squarespace, admin portal, and user dashboard.',
-  },
-  {
-    title: 'Bootcampspot',
-    subtitle: 'Classroom management software for bootcamps.',
-    link: 'https://bootcampspot.instructure.com',
-    image: '/images/projects/bootcampspot.jpg',
-    date: '2015-11-20',
-    desc: 'Classroom management software for bootcamps.',
   },
   {
     title: 'Le Fashion Cottage',
