@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import dayjs from 'dayjs';
+// import dayjs from 'dayjs';
 
 const Cell = ({ data }) => (
   <div className="cell-container">
@@ -11,9 +11,9 @@ const Cell = ({ data }) => (
             {data.title}
           </a>
         </h3>
-        <time className="published">
+        {/* <time className="published">
           {dayjs(data.date).format('MMMM, YYYY')}
-        </time>
+        </time> */}
       </header>
       <a
         href={data.link}
