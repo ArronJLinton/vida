@@ -12,6 +12,18 @@
   opacity: 0.5;
 }
 
+@include breakpoint(small) {
+  .menu-hover {
+    font-size: 2em;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.65em;
+    height: 100%;
+  }
+}
+
 .hamburger-ul {
   display: block;
 
