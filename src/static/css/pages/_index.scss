@@ -219,6 +219,10 @@
 }
 
 @include breakpoint(small) {
+  .home__badge {
+    display: none;
+  }
+
   .home__stats {
     grid-template-columns: 1fr;
     gap: 1em;
