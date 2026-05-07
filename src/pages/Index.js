@@ -1,8 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import HomeSocialRow from '../components/Home/HomeSocialRow';
 import Main from '../layouts/Main';
-import ContactIcons from '../components/Contact/ContactIcons';
+
+const HEADLINE = 'I bridge the gap between technical complexity and business outcomes.';
+const HEADLINE_WORDS = HEADLINE.split(' ');
+
+const ROLE_TAGS = [
+  'Solutions Engineer',
+  'Software Engineer',
+  'Founder @ Magistri Dev',
+];
 
 const Index = () => (
   <Main
@@ -13,65 +22,55 @@ const Index = () => (
   >
     <section className="home" id="home">
       <div className="home__hero">
-        <div className="home__copy">
-          <div className="home__badge">Available for work</div>
+        <div className="home__col home__col--text">
           <h2 className="home__headline">
-            Hello, I&apos;m
-            <br />
-            Arron J. Linton
+            {HEADLINE_WORDS.map((word, i) => (
+              <span
+                key={HEADLINE_WORDS.slice(0, i + 1).join('-')}
+                className={`home__word${
+                  word.toLowerCase() === 'bridge' ? ' home__word--accent' : ''
+                }`}
+                style={{ animationDelay: `${i * 50}ms` }}
+              >
+                {word}
+                {i < HEADLINE_WORDS.length - 1 ? '\u00a0' : ''}
+              </span>
+            ))}
           </h2>
-          <p className="home__subhead">
-            I Build Scalable Web, Mobile, and AI Products That Drive Real
-            Business Results
-          </p>
-          <p className="home__meta">
-            Full Stack Engineer | React, Node, Go | AI-Powered Systems | Founder
-            @ Magistri Dev
+
+          <p className="home__sublead">
+            Full-stack engineer and solutions architect who turns product vision
+            into scalable, AI-powered systems.
           </p>
 
-          <div className="home__cta">
-            <Link to="/resume" className="button home__ctaPrimary">
-              Download Resume
-            </Link>
-            <Link to="/projects" className="button home__ctaSecondary">
+          <p className="home__roles">{ROLE_TAGS.join(' | ')}</p>
+
+          <div className="home__ctaRow">
+            <Link to="/projects" className="home__btn home__btn--primary">
               View My Work
             </Link>
+            <Link to="/resume" className="home__btn home__btn--secondary">
+              Download Resume
+            </Link>
           </div>
 
-          <div className="home__social">
-            <ContactIcons />
-          </div>
+          <HomeSocialRow />
         </div>
 
-        <div className="home__visual" aria-hidden="true">
-          <div className="home__portraitRing">
-            <div className="home__portrait">
+        <div className="home__col home__col--visual">
+          <span className="home__deco" aria-hidden="true">
+            01
+          </span>
+          <div className="home__hexWrap">
+            <div className="home__hexGlow" aria-hidden="true" />
+            <div className="home__hexClip">
               <img
                 src={`${process.env.PUBLIC_URL}/images/me.jpg`}
-                alt=""
+                alt="Arron J. Linton"
                 loading="eager"
               />
             </div>
           </div>
-          <div className="home__availabilityPill">
-            <span className="home__availabilityDot" />
-            Available for hire
-          </div>
-        </div>
-      </div>
-
-      <div className="home__stats" aria-label="Highlights">
-        <div className="home__stat">
-          <div className="home__statValue">10+</div>
-          <div className="home__statLabel">Projects</div>
-        </div>
-        <div className="home__stat">
-          <div className="home__statValue">5+</div>
-          <div className="home__statLabel">Years Exp</div>
-        </div>
-        <div className="home__stat">
-          <div className="home__statValue">100%</div>
-          <div className="home__statLabel">Client Satisfaction</div>
         </div>
       </div>
     </section>

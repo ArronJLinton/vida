@@ -1,0 +1,45 @@
+///
+/// Light design system (CSS variables + global base)
+///
+
+:root {
+  --ds-bg: #ffffff;
+  --ds-bg-muted: #f4f4f4;
+  --ds-text: #3c3b3b;
+  --ds-text-muted: #646464;
+  --ds-accent-green: #1eb482;
+  --ds-accent-blue: #1e78ff;
+  --ds-on-accent: #0b0f19;
+  --ds-font-display: "Playfair Display", Georgia, serif;
+  --ds-font-body: "DM Sans", system-ui, sans-serif;
+}
+
+html {
+  background: var(--ds-bg-muted);
+}
+
+body {
+  background-color: var(--ds-bg-muted);
+  color: var(--ds-text);
+  font-family: var(--ds-font-body);
+  position: relative;
+}
+
+// Subtle grid: ~3% contrast lines, 60px cells (fixed to viewport)
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  background-position: 0 0;
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}

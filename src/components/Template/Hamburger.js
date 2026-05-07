@@ -1,11 +1,12 @@
 import React, { Suspense, lazy, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 import routes from '../../data/routes';
 
 const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
 
-const Hamburger = () => {
+const Hamburger = ({ menuClassName = undefined }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -28,12 +29,23 @@ const Hamburger = () => {
         </ul>
       </nav>
       <Suspense fallback={<></>}>
-        <Menu right isOpen={open}>
+        <Menu
+          right
+          isOpen={open}
+          menuClassName={menuClassName}
+          styles={{
+            bmMenu: {
+              top: '3.5em',
+              height: 'calc(100% - 3.5em)',
+              width: 'min(100%, 22rem)',
+            },
+          }}
+        >
           <ul className="hamburger-ul">
             {routes.map((l) => (
               <li key={l.label}>
                 <Link to={l.path} onClick={() => setOpen(!open)}>
-                  <h3 className={l.index && 'index-li'}>{l.label}</h3>
+                  <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
                 </Link>
               </li>
             ))}
@@ -42,6 +54,14 @@ const Hamburger = () => {
       </Suspense>
     </div>
   );
+};
+
+Hamburger.propTypes = {
+  menuClassName: PropTypes.string,
+};
+
+Hamburger.defaultProps = {
+  menuClassName: undefined,
 };
 
 export default Hamburger;
