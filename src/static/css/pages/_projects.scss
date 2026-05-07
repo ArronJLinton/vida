@@ -1,0 +1,121 @@
+///
+/// Projects page
+///
+
+#projects {
+  .projects-hero {
+    margin: 0 0 _size(section-spacing);
+    text-align: center;
+  }
+
+  .projects-hero__title {
+    font-size: 1.4em;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.25em;
+  }
+
+  .projects-hero__subtitle {
+    margin: 0 0 1.5em;
+    color: _palette(fg);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  .projects-grid__item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects-grid__link {
+    text-decoration: none;
+    border-bottom: 0;
+    color: inherit;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+  }
+
+  .projects-grid__devices {
+    position: relative;
+    width: 100%;
+    max-width: 22rem;
+    height: 13rem;
+  }
+
+  .projects-grid__device {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects-grid__device img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .projects-grid__device--desktop {
+    inset: 0;
+    opacity: 0.85;
+    z-index: 0;
+  }
+
+  .projects-grid__device--mobile {
+    width: 26%;
+    left: 2%;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .projects-grid__device--tablet {
+    width: 42%;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .projects-grid__title {
+    font-size: 0.9em;
+    text-transform: none;
+    letter-spacing: 0.06em;
+  }
+}
+
+@include breakpoint(large) {
+  #projects {
+    .projects-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: 6rem;
+      row-gap: 3rem;
+    }
+
+    .projects-grid__devices {
+      max-width: 24rem;
+      height: 13.5rem;
+    }
+  }
+}
+
+@include breakpoint(small) {
+  #projects {
+    .projects-grid__item {
+      justify-content: stretch;
+    }
+
+    .projects-grid__link {
+      width: 100%;
+    }
+
+    .projects-grid__devices {
+      max-width: none;
+      height: 12.5rem;
+    }
+  }
+}
