@@ -58,6 +58,7 @@
   },
   "reactSnap": {
     "inlineCss": true,
+    "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": true,
       "removeComments": true

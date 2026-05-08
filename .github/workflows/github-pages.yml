@@ -58,6 +58,8 @@ jobs:
         env:
           NODE_ENV: production
           CI: true
+          # Optional: add REACT_APP_GA_TRACKING_ID in repo secrets to enable GA in the built bundle.
+          REACT_APP_GA_TRACKING_ID: ${{ secrets.REACT_APP_GA_TRACKING_ID }}
 
       - name: Verify build output
         run: |
