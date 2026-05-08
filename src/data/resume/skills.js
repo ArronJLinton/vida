@@ -1,18 +1,8 @@
 const skills = [
   {
-    title: 'Javascript',
+    title: 'TypeScript',
     competency: 4,
     category: ['Web Development', 'Languages', 'Javascript'],
-  },
-  {
-    title: 'Node.JS',
-    competency: 4,
-    category: ['Backend Engineering', 'Javascript'],
-  },
-  {
-    title: 'Go',
-    competency: 3,
-    category: ['Backend Engineering'],
   },
   {
     title: 'React',
@@ -25,14 +15,24 @@ const skills = [
     category: ['Javascript', 'Mobile Development'],
   },
   {
-    title: 'Next.JS',
-    competency: 3,
-    category: ['Web Development', 'Javascript'],
+    title: 'Node.js',
+    competency: 4,
+    category: ['Backend Engineering', 'Javascript'],
   },
   {
-    title: 'Heroku',
+    title: 'Express.js',
     competency: 3,
-    category: ['Web Development', 'DevOps'],
+    category: ['Backend Engineering', 'Javascript'],
+  },
+  {
+    title: 'Golang',
+    competency: 3,
+    category: ['Backend Engineering', 'Languages'],
+  },
+  {
+    title: 'PostgreSQL',
+    competency: 4,
+    category: ['Web Development', 'Databases'],
   },
   {
     title: 'MongoDB',
@@ -40,29 +40,9 @@ const skills = [
     category: ['Web Development', 'Databases'],
   },
   {
-    title: 'ElasticSearch',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'PostgreSQL/SQLite3/SQL/Redshift',
-    competency: 4,
-    category: ['Web Development', 'Databases', 'Languages'],
-  },
-  {
-    title: 'Redis',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Express.JS',
-    competency: 2,
+    title: 'Salesforce (LWC & Apex)',
+    competency: 3,
     category: ['Web Development', 'Javascript'],
-  },
-  {
-    title: 'Google Cloud Compute',
-    competency: 2,
-    category: ['Web Development', 'DevOps'],
   },
   {
     title: 'AWS',
@@ -70,44 +50,42 @@ const skills = [
     category: ['Web Development', 'DevOps'],
   },
   {
-    title: 'Docker',
+    title: 'Google Cloud',
     competency: 3,
-    category: ['Data Engineering'],
+    category: ['Web Development', 'DevOps'],
   },
   {
-    title: 'Typescript',
+    title: 'Datadog',
     competency: 3,
-    category: ['Web Development', 'Languages', 'Javascript'],
+    category: ['Web Development', 'DevOps'],
+  },
+  {
+    title: 'Sentry',
+    competency: 3,
+    category: ['Web Development', 'DevOps'],
+  },
+  {
+    title: 'GitHub Actions / CI-CD',
+    competency: 3,
+    category: ['Web Development', 'DevOps'],
+  },
+  {
+    title: 'Stripe & RevenueCat',
+    competency: 3,
+    category: ['Web Development', 'Javascript'],
+  },
+  {
+    title: 'AI-assisted development (Cursor, Copilot, Claude)',
+    competency: 4,
+    category: ['Web Development', 'Javascript'],
   },
   {
     title: 'HTML + SASS/SCSS/CSS',
     competency: 3,
     category: ['Web Development', 'Languages'],
   },
-  {
-    title: 'GraphQL',
-    competency: 2,
-    category: ['Web Development', 'Databases'],
-  },
-  {
-    title: 'Xcode',
-    competency: 3,
-    category: ['Mobile Development'],
-  },
-  {
-    title: 'Android Studio',
-    competency: 2,
-    category: ['Mobile Development'],
-  },
-  {
-    title: 'Microsoft App Center',
-    competency: 4,
-    category: ['Mobile Development', 'DevOps'],
-  },
 ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
-// this is a list of colors that I like. The length should be === to the
-// number of categories. Re-arrange this list until you find a pattern you like.
 const colors = [
   '#6968b3',
   '#37b1f5',
@@ -120,13 +98,14 @@ const colors = [
   '#d75858',
   '#747fff',
   '#64cb7b',
+  '#2d8a6e',
 ];
 
 const categories = [...new Set(skills.flatMap(({ category }) => category))]
   .sort()
   .map((category, index) => ({
     name: category,
-    color: colors[index],
+    color: colors[index % colors.length],
   }));
 
 export { categories, skills };

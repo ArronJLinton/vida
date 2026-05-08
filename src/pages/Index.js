@@ -49,9 +49,15 @@ const Index = () => (
             <Link to="/projects" className="home__btn home__btn--primary">
               View My Work
             </Link>
-            <Link to="/resume" className="home__btn home__btn--secondary">
+            <a
+              href={`${process.env.PUBLIC_URL}/ArronJLinton.pdf`}
+              className="home__btn home__btn--secondary"
+              download="ArronJLinton.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Download Resume
-            </Link>
+            </a>
           </div>
 
           <HomeSocialRow />

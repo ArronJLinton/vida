@@ -4,7 +4,7 @@
  *
  * @property {string} name - Name of the company
  * @property {string} position - Position title
- * @property {string} url - Company website
+ * @property {string|undefined} url - Company website
  * @property {string} startDate - Start date of the position in YYYY-MM-DD format
  * @property {string|undefined} endDate - End date of the position in YYYY-MM-DD format.
  * If undefined, the position is still active.
@@ -13,75 +13,76 @@
  */
 const work = [
   {
-    name: '2U',
-    position: 'Software Engineer',
-    url: 'https://2u.com',
-    startDate: '2020-08-01',
-    endDate: '2024-05-01',
-    summary: 'Through global online learning platform edX, 2U connects millions of people to high-quality, career-relevant education in partnership with leading universities and industry experts. As a Software Engineer, I worked in a full stack capacity delivering software solutions for student, instructor, and internal staff facing needs.',
+    name: 'The Creative Bomb',
+    position: 'Solutions Engineer',
+    startDate: '2024-09-01',
+    summary:
+      'Customer-facing technologist partnering with Sales across the full deal cycle for an early-stage product company (remote, Miami FL).',
     highlights: [
-      'Lead the development of an Instructional Staff Portal to streamline scheduling and reporting; this initiative saved the company $100k+ in staff overpayment and generated a revenue stream of $500k.',
-      'Significantly increased efficiency by 30% in incident resolution and debugging by implementing DataDog for client (React) and server-side error tracking (Golang and NodeJS), monitoring, and analytics.',
-      'Increased visibility in support cases by implementing Photo Upload functionality with AWS S3 and Cognito.',
-      'Integrated the Zoom API using websockets to capture real-time data.',
-      'Pitched, designed, developed, deployed, and maintained an npm package consoldiating survey functionality across all platforms.',
-    ],
-  },
-  {
-    name: 'University of Washington - Seattle',
-    position: 'Lead Instructor',
-    // url: 'http://skepticalinvestments.biz',
-    startDate: '2018-07-01',
-    endDate: '2020-07-01',
-    summary: 'Delivered content based on fundamentals of Full Stack Development and offered mentorship, support, and guidance for students.',
-    highlights: [
-      'Successfully graduated 55 students from the inaugural University of Washington Coding Bootcamp.',
-      'Worked closely with over 300+ Coding Bootcamp students to build and polish their craft within the Web Development ecosystem.',
-      'Collaborated closely with the academic team to maintain and update curriculum according to market trends.',
-    ],
-  },
-  {
-    name: 'Munca Technologies',
-    position: 'Lead Software Engineer',
-    url: 'https://muncatech.com',
-    startDate: '2019-04-01',
-    endDate: '2020-12-01',
-    summary: 'Munca Technologies Inc partners with universities, municipalities and local communities to provide optimal transportation options to enhance well-being, improve affordability, extend outreach, and leverage and extend technology for the betterment of the communities we serve.',
-    highlights: [
-      'Spearheaded the development of the company\'s greenfield mobile application.',
-      'Used React Native to build the iOS and Android application.',
-      'Implemented native configurations via Xcode and Android Studio.',
-      'Implemented CI/CD with Microsoft AppCenter for managing iOS and Android Build Systems, Analytics, and Testing.',
-      'Worked with Apollo Client for interacting with GraphQL API.',
+      'Partner with Sales on discovery, solution positioning, and deal strategy with strong technical credibility.',
+      'Deliver live demos, proof-of-concepts, and tailored walkthroughs that translate early-stage features into customer-ready narratives.',
+      'Resolve bugs and iterate on live custom solutions in production—triage through resolution end-to-end.',
+      'Build AI-assisted workflows with Claude Code, GitHub Copilot, and Cursor to automate work and improve consistency.',
+      'Ship customer-facing web and mobile apps with React, React Native, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.',
+      'Architect Stripe and RevenueCat payment flows, including subscriptions and event-driven backend processing.',
+      'Drive observability with Sentry—alerting, error triage, and performance profiling.',
+      'Maintain CI/CD with GitHub Actions and Expo EAS for reliable, low-overhead releases.',
     ],
   },
   {
     name: 'Magistri Dev',
-    position: 'Consultant, Software Engineering',
-    // url: 'http://enveritas.org',
-    startDate: '2017-07-01',
-    // endDate: '2018-01-01',
-    summary: 'Worked with clients to establish and build their web and mobile presence.',
+    position: 'Founder & Consultant',
+    startDate: '2024-01-01',
+    summary:
+      'Independent practice owning sales through delivery—business development, engineering, and ongoing client technical support.',
     highlights: [
-      'Delivered a Tow Request mobile application for iOS and Android using React Native, delivering seamless user experiences across both platforms.',
-      'Built a custom CRM platform and Customer Dashboard using React.',
-      'Integrated third-party services and APIs, including payment gateways (Square API) and social media authentication, enhancing app functionality and user engagement.',
-      'Designed and implemented core features such as push notifications, photo upload, and real-time data synchronization using Firebase.',
-      'Managed the entire development lifecycle, from initial concept and wireframing to app deployment on the App Store and Google Play Store.',
-      'Successfully delivered 2 custom eCommerce platforms using Shopify, which included integrations with Third-Party Distributors.',
+      'Run the full sales and implementation lifecycle from prospecting and discovery through delivery and support.',
+      'Delivered a custom CRM for The Takedown (DMCA enforcement)—sole point of contact from deal to deployment.',
+      'Guide clients on LLM APIs, agentic frameworks, and integration patterns to pick the right AI tools.',
+      'Managed up to five concurrent client projects across timelines, relationships, and execution.',
+      'Built solutions with TypeScript, React, Node.js, PostgreSQL, AWS, and Google Cloud end-to-end.',
     ],
   },
   {
-    name: 'Trilogy Education Services',
-    position: 'Backend Engineer',
-    url: 'https://matroid.com',
-    startDate: '2017-06-01',
-    endDate: '2017-09-01',
-    summary: 'Worked on an internal facing tool for gathering data from public domains.',
+    name: '2U Inc.',
+    position: 'Software Engineer',
+    url: 'https://2u.com',
+    startDate: '2020-07-01',
+    endDate: '2024-05-01',
+    summary:
+      'Enterprise SaaS engineering on edX-connected platforms, partnering with product and stakeholders on scalable features.',
     highlights: [
-      'Created a Web Scraper using Node, Express, Nightmare.js, and Cheerio.',
-      'Streamlined the process for gathering course performance insights.',
-      'Increased efficiency for performance reporting by 30% for the Data Analytics Team.',
+      'Translated business requirements into scalable architectures with PMs, designers, and stakeholders.',
+      'Led Datadog observability rollout—documentation and adoption across teams; reduced mean time to resolution (MTTR) by about 30%.',
+      'Shipped high-impact features with React, TypeScript, Golang, Node.js, and PostgreSQL.',
+      'Built Salesforce Lightning Web Components (LWC) with Apex for internal workflows and integrated systems of record.',
+      'Authored ATAMs (Architecture Tradeoff Analysis Method) for infrastructure and tooling decisions.',
+      'Designed and built Golang microservices for high-traffic, customer-facing platforms with reliability and performance focus.',
+    ],
+  },
+  {
+    name: 'University of Washington',
+    position: 'Lead Instructor',
+    url: 'https://www.washington.edu/',
+    startDate: '2018-07-01',
+    endDate: '2020-07-01',
+    summary:
+      'Instruction and mentorship for large cohorts in full stack web development (Coding Bootcamp).',
+    highlights: [
+      'Owned outcomes for 300+ engineers navigating complex technical coursework—onboarding, adoption, and completion.',
+      'Built prototypes and delivered live technical presentations that turned abstract concepts into hands-on learning.',
+      'Scaled support with help content, documentation, and instructional materials for self-serve cohort success.',
+    ],
+  },
+  {
+    name: 'Verizon & TEKsystems',
+    position: 'Account Executive & Technical Recruiter',
+    startDate: '2013-01-01',
+    endDate: '2018-06-01',
+    summary:
+      'B2B enterprise sales, quota attainment, client relationship management, and technical talent acquisition—foundation for customer-facing technical roles.',
+    highlights: [
+      'Direct customer ownership, high-volume outreach, and relationship-driven retention prior to engineering-focused positions.',
     ],
   },
 ];

@@ -10,6 +10,8 @@ import degrees from '../data/resume/degrees';
 import work from '../data/resume/work';
 import { skills, categories } from '../data/resume/skills';
 
+const RESUME_PDF = `${process.env.PUBLIC_URL}/ArronJLinton.pdf`;
+
 // NOTE: sections are displayed in order defined.
 const sections = {
   Education: () => <Education data={degrees} />,
@@ -21,14 +23,25 @@ const sections = {
 const Resume = () => (
   <Main
     title="Resume"
-    description="Arron J. Linton's Resume. Smile Identity, Arthena, Matroid, YC, Skeptical Investments, Stanford ICME, Planet, and Facebook."
+    description="Arron J. Linton's resume: senior software engineer and solutions engineer with experience at The Creative Bomb, Magistri Dev, 2U, University of Washington, Verizon, and TEKsystems."
   >
     <article className="post" id="resume">
       <header>
         <div className="title">
           <h2>
-            <Link to="resume">Resume</Link>
+            <Link to="/resume">Resume</Link>
           </h2>
+          <p className="resume-pdf-download">
+            <a
+              href={RESUME_PDF}
+              download="ArronJLinton.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button"
+            >
+              Download PDF resume
+            </a>
+          </p>
           <div className="link-container">
             {Object.keys(sections).map((sec) => (
               <h4 key={sec}>
