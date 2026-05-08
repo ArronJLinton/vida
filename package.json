@@ -57,7 +57,7 @@
     "source-map-explorer": "^2.5.3"
   },
   "reactSnap": {
-    "inlineCss": true,
+    "inlineCss": false,
     "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": true,
