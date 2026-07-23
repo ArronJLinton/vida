@@ -1,9 +1,7 @@
-I’m a product-focused Full Stack Engineer building scalable web and mobile applications with a focus on performance, user experience, and rapid iteration. I work across the stack with React, TypeScript, Node.js, and Go, and actively leverage AI tools and agent-based workflows to accelerate development and deliver smarter products.
+I'm a full-stack engineer who builds at the speed of AI. I work across the entire stack — React, TypeScript, Node.js, and Go — and deeply integrate AI tooling into every stage of development, from architecture to deployment. Cursor, Claude Code, and GitHub Copilot aren't shortcuts for me — they're core to how I design systems, accelerate iteration, and ship production-ready products faster than traditional workflows allow.
 <br><br>
-I’ve led engineering efforts across multiple applications and run a software agency, partnering with startups and businesses to bring ideas from 0→1 and scale them in production.
+I've led engineering across multiple AI-powered products, run a software agency taking ideas from 0→1, and taught hundreds of developers at the University of Washington Coding Bootcamp. That range — from building to shipping to teaching — means I understand not just how to use these tools, but how to build with them intentionally.
 <br><br>
-Alongside my engineering work, I’ve served as a Lead Instructor at the University of Washington Coding Bootcamp, mentoring developers and helping them transition into high-impact engineering roles.
+I thrive at the frontier: where engineering rigor meets AI-native development, and where the goal isn't just working software — it's smarter, faster, better outcomes.
 <br><br>
-I operate at the intersection of engineering, product, and AI, and thrive in fast-moving environments where ownership and execution matter.
-<br><br>
-Let’s build something great.
+[Let's connect →](/contact)
