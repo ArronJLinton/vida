@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import HomeSocialRow from '../components/Home/HomeSocialRow';
 import Main from '../layouts/Main';
 
-const HEADLINE = 'I bridge the gap between technical complexity and business outcomes.';
+// eslint-disable-next-line operator-linebreak
+const HEADLINE =
+  'I bridge the gap between technical complexity and business outcomes.';
 const HEADLINE_WORDS = HEADLINE.split(' ');
 
 const ROLE_TAGS = [
   'Solutions Engineer',
-  'Software Engineer',
+  'Full Stack Engineer',
   'Founder @ Magistri Dev',
 ];
 
@@ -39,8 +41,8 @@ const Index = () => (
           </h2>
 
           <p className="home__sublead">
-            Full-stack engineer and solutions architect who turns product vision
-            into scalable, AI-powered systems.
+            AI Engineer and Solutions Architect who turns product vision into
+            scalable, AI-powered systems.
           </p>
 
           <p className="home__roles">{ROLE_TAGS.join(' | ')}</p>
@@ -49,24 +51,12 @@ const Index = () => (
             <Link to="/projects" className="home__btn home__btn--primary">
               View My Work
             </Link>
-            <a
-              href={`${process.env.PUBLIC_URL}/ArronJLinton.pdf`}
-              className="home__btn home__btn--secondary"
-              download="ArronJLinton.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download Resume
-            </a>
           </div>
 
           <HomeSocialRow />
         </div>
 
         <div className="home__col home__col--visual">
-          <span className="home__deco" aria-hidden="true">
-            01
-          </span>
           <div className="home__hexWrap">
             <div className="home__hexGlow" aria-hidden="true" />
             <div className="home__hexClip">

@@ -173,20 +173,6 @@
   min-height: 22rem;
 }
 
-.home__deco {
-  position: absolute;
-  right: -2%;
-  top: 8%;
-  font-family: var(--ds-font-display);
-  font-size: 20vw;
-  font-weight: 700;
-  line-height: 1;
-  color: rgba(60, 59, 59, 0.06);
-  pointer-events: none;
-  user-select: none;
-  z-index: 0;
-}
-
 .home__hexWrap {
   position: relative;
   z-index: 1;
@@ -241,21 +227,11 @@
     min-height: 18rem;
   }
 
-  .home__deco {
-    font-size: 42vw;
-    right: 0;
-    top: 0;
-  }
-
   .home__headline {
     font-size: 36px;
   }
 
   .home__ctaRow {
     flex-direction: column;
-  }
-
-  .home__btn {
-    width: 100%;
   }
 }
