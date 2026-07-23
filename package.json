@@ -58,6 +58,7 @@
   },
   "reactSnap": {
     "inlineCss": false,
+    "crawl": false,
     "skipThirdPartyRequests": true,
     "minifyHtml": {
       "collapseWhitespace": true,
@@ -73,7 +74,8 @@
       "/about",
       "/projects",
       "/resume",
-      "/contact"
+      "/contact",
+      "/404.html"
     ]
   },
   "browserslist": {
