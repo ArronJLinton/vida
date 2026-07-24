@@ -40,9 +40,9 @@ const skills = [
     category: ['Web Development', 'Databases'],
   },
   {
-    title: 'Salesforce (LWC & Apex)',
-    competency: 3,
-    category: ['Web Development', 'Javascript'],
+    title: 'API & Webhook Integration',
+    competency: 4,
+    category: ['Web Development', 'Backend Engineering'],
   },
   {
     title: 'AWS',
@@ -66,7 +66,7 @@ const skills = [
   },
   {
     title: 'GitHub Actions / CI-CD',
-    competency: 3,
+    competency: 4,
     category: ['Web Development', 'DevOps'],
   },
   {
@@ -78,6 +78,11 @@ const skills = [
     title: 'AI-assisted development (Cursor, Copilot, Claude)',
     competency: 4,
     category: ['Web Development', 'Javascript'],
+  },
+  {
+    title: 'Customer Success Engineering',
+    competency: 4,
+    category: ['Web Development'],
   },
   {
     title: 'HTML + SASS/SCSS/CSS',

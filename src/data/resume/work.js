@@ -13,34 +13,35 @@
  */
 const work = [
   {
-    name: 'The Creative Bomb',
-    position: 'Solutions Engineer',
-    startDate: '2024-09-01',
-    summary:
-      'Customer-facing technologist partnering with Sales across the full deal cycle for an early-stage product company (remote, Miami FL).',
-    highlights: [
-      'Partner with Sales on discovery, solution positioning, and deal strategy with strong technical credibility.',
-      'Deliver live demos, proof-of-concepts, and tailored walkthroughs that translate early-stage features into customer-ready narratives.',
-      'Resolve bugs and iterate on live custom solutions in production—triage through resolution end-to-end.',
-      'Build AI-assisted workflows with Claude Code, GitHub Copilot, and Cursor to automate work and improve consistency.',
-      'Ship customer-facing web and mobile apps with React, React Native, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.',
-      'Architect Stripe and RevenueCat payment flows, including subscriptions and event-driven backend processing.',
-      'Drive observability with Sentry—alerting, error triage, and performance profiling.',
-      'Maintain CI/CD with GitHub Actions and Expo EAS for reliable, low-overhead releases.',
-    ],
-  },
-  {
     name: 'Magistri Dev',
     position: 'Founder & Consultant',
     startDate: '2024-01-01',
     summary:
-      'Independent practice owning sales through delivery—business development, engineering, and ongoing client technical support.',
+      'Independent practice owning technical delivery and client relationship management—from sales conversation through implementation and ongoing support.',
     highlights: [
-      'Run the full sales and implementation lifecycle from prospecting and discovery through delivery and support.',
-      'Delivered a custom CRM for The Takedown (DMCA enforcement)—sole point of contact from deal to deployment.',
-      'Guide clients on LLM APIs, agentic frameworks, and integration patterns to pick the right AI tools.',
-      'Managed up to five concurrent client projects across timelines, relationships, and execution.',
-      'Built solutions with TypeScript, React, Node.js, PostgreSQL, AWS, and Google Cloud end-to-end.',
+      'Sourced, scoped, and delivered an enterprise CRM for a DMCA enforcement company—owning the full engagement from initial sales through technical implementation and handoff.',
+      'Deployed Retail AI to streamline customer service workflows for medical practices, configuring LLM-based tooling against live environments and iterating with non-technical stakeholders.',
+      'Build and deliver custom web and mobile applications end-to-end across industries, maintaining post-launch relationships for support, iteration, and account expansion.',
+      'Operate at the intersection of technical delivery and client relationship management—handling scoping, project communication, and outcome accountability without a support layer.',
+      'Built client solutions with TypeScript, React, Node.js, PostgreSQL, AWS, and Google Cloud, owning architecture, development, and GitHub Actions CI/CD end-to-end.',
+      'Managed up to five concurrent client projects, balancing delivery timelines, relationships, and technical execution.',
+    ],
+  },
+  {
+    name: 'The Creative Bomb',
+    position: 'Solutions Engineer',
+    startDate: '2024-09-01',
+    endDate: '2026-03-01',
+    summary:
+      'Customer-facing technologist supporting sales and delivery for an early-stage product company (remote, Miami FL).',
+    highlights: [
+      'Built functional prototypes to support sales and conducted live product demos that translated early-stage features into customer-ready presentations.',
+      'Resolved bugs and iterated on live custom solutions in production—owning issues end-to-end from triage through resolution.',
+      'Built and maintained AI-assisted workflows with Claude Code, GitHub Copilot, and Cursor to automate repetitive work across engineering and customer-facing efforts.',
+      'Owned end-to-end delivery of customer-facing web and mobile apps with React, React Native, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.',
+      'Architected payment infrastructure via Stripe and RevenueCat, including subscription lifecycle management and event-driven backend processing.',
+      'Championed production observability with Sentry—alerting, error triage, and performance profiling to resolve issues before they impacted customers.',
+      'Designed and maintained CI/CD pipelines with GitHub Actions and Expo EAS for lower overhead and zero-downtime releases.',
     ],
   },
   {
@@ -50,14 +51,14 @@ const work = [
     startDate: '2020-07-01',
     endDate: '2024-05-01',
     summary:
-      'Enterprise SaaS engineering on edX-connected platforms, partnering with product and stakeholders on scalable features.',
+      'Enterprise SaaS engineering on high-traffic education platforms, partnering with product and stakeholders on scalable features.',
     highlights: [
-      'Translated business requirements into scalable architectures with PMs, designers, and stakeholders.',
-      'Led Datadog observability rollout—documentation and adoption across teams; reduced mean time to resolution (MTTR) by about 30%.',
-      'Shipped high-impact features with React, TypeScript, Golang, Node.js, and PostgreSQL.',
-      'Built Salesforce Lightning Web Components (LWC) with Apex for internal workflows and integrated systems of record.',
-      'Authored ATAMs (Architecture Tradeoff Analysis Method) for infrastructure and tooling decisions.',
-      'Designed and built Golang microservices for high-traffic, customer-facing platforms with reliability and performance focus.',
+      'Collaborated with product managers, designers, and business stakeholders to translate requirements into scalable technical architectures.',
+      'Built and integrated with external APIs, third-party systems, and imperfect data sources under real-world constraints.',
+      'Led company-wide Datadog observability rollout—drove adoption across teams, authored documentation, and reduced MTTR by 30%.',
+      'Delivered high-impact enterprise SaaS features end-to-end with React, TypeScript, Golang, Node.js, and PostgreSQL.',
+      'Performed research and authored ATAMs (Architecture Tradeoff Analysis Method) to evaluate infrastructure, technology, and tooling decisions.',
+      'Designed and built Golang microservices supporting high-traffic, customer-facing platforms with reliability and performance under load.',
     ],
   },
   {
@@ -69,9 +70,9 @@ const work = [
     summary:
       'Instruction and mentorship for large cohorts in full stack web development (Coding Bootcamp).',
     highlights: [
-      'Owned outcomes for 300+ engineers navigating complex technical coursework—onboarding, adoption, and completion.',
-      'Built prototypes and delivered live technical presentations that turned abstract concepts into hands-on learning.',
-      'Scaled support with help content, documentation, and instructional materials for self-serve cohort success.',
+      'Owned end-to-end success of 300+ engineers navigating complex technical coursework—onboarding, adoption, and outcomes.',
+      'Built working prototypes and delivered live technical presentations that turned abstract concepts into hands-on learning.',
+      'Developed help content, documentation, and instructional materials that scaled individual support into self-serve cohort resources.',
     ],
   },
   {
@@ -83,6 +84,16 @@ const work = [
       'B2B enterprise sales, quota attainment, client relationship management, and technical talent acquisition—foundation for customer-facing technical roles.',
     highlights: [
       'Direct customer ownership, high-volume outreach, and relationship-driven retention prior to engineering-focused positions.',
+    ],
+  },
+  {
+    name: 'Live Events',
+    position: 'Emcee',
+    startDate: '2013-01-01',
+    summary:
+      'Weddings, bar/bat mitzvahs, and corporate events—hosting 100+ live events over 13 years.',
+    highlights: [
+      'Set the tone, energized rooms, and guided event flow from first moment to last—creating memorable audience experiences.',
     ],
   },
 ];
