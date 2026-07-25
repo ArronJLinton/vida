@@ -40,7 +40,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.25rem;
     width: 100%;
     max-width: min(52rem, 100%);
     margin-inline: auto;
@@ -49,16 +48,12 @@
   .projects-grid__devices {
     position: relative;
     width: 100%;
-    aspect-ratio: 2 / 1;
-    min-height: clamp(14rem, 42vw, 22rem);
-    max-height: 26rem;
   }
 
   .projects-grid__device {
-    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .projects-grid__device img {
@@ -68,57 +63,78 @@
   }
 
   .projects-grid__device--desktop {
-    inset: 0;
-    opacity: 0.88;
+    position: relative;
     z-index: 0;
+    width: 100%;
   }
 
   .projects-grid__device--desktop img {
     width: 100%;
+    height: auto;
+  }
+
+  .projects-grid__device--mobile,
+  .projects-grid__device--tablet {
+    position: absolute;
+    width: auto;
+    height: 48%;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .projects-grid__device--mobile img,
+  .projects-grid__device--tablet img {
+    width: auto;
     height: 100%;
-    object-fit: cover;
-    object-position: top center;
   }
 
   .projects-grid__device--mobile {
-    width: 22%;
-    max-width: 7.5rem;
-    left: 3%;
-    bottom: 0;
-    z-index: 2;
+    left: 2%;
+    transform: translate(-25%, -25%);
   }
 
   .projects-grid__device--tablet {
-    width: 38%;
-    max-width: 14rem;
     right: 2%;
-    bottom: 0;
-    z-index: 2;
+    transform: translate(25%, -25%);
   }
 
-  .projects-grid__title {
-    font-size: 1em;
-    text-transform: none;
-    letter-spacing: 0.06em;
-    text-align: center;
+  .projects-grid__single {
+    width: 100%;
+    max-width: min(36rem, 100%);
+    margin-inline: auto;
+  }
+
+  .projects-grid__single img {
+    display: block;
+    width: 100%;
+    height: auto;
   }
 }
 
 @include breakpoint(small) {
   #projects {
+    text-align: center;
+
+    .projects-grid {
+      justify-items: center;
+    }
+
+    .projects-grid__item {
+      justify-content: center;
+    }
+
+    .projects-grid__link {
+      width: 100%;
+      max-width: 100%;
+    }
+
     .projects-grid__devices {
-      min-height: 13rem;
-      max-height: none;
+      margin-inline: auto;
     }
 
-    .projects-grid__device--mobile {
-      width: 24%;
-      max-width: 5.5rem;
-    }
-
+    .projects-grid__device--mobile,
     .projects-grid__device--tablet {
-      width: 40%;
-      max-width: 11rem;
+      height: 42%;
     }
   }
 }

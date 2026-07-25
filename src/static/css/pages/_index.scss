@@ -216,10 +216,18 @@
 @media screen and (max-width: 768px) {
   #home.home {
     padding-top: 5rem;
+    text-align: center;
   }
 
   .home__hero {
     grid-template-columns: 1fr;
+  }
+
+  .home__col--text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .home__col--visual {
@@ -231,7 +239,19 @@
     font-size: 36px;
   }
 
+  .home__sublead,
+  .home__roles {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .home__ctaRow {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home__socialRow {
+    justify-content: center;
   }
 }

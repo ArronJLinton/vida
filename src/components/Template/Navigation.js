@@ -32,7 +32,7 @@ const Navigation = () => (
             ))}
         </ul>
       </nav>
-      <Hamburger menuClassName="site-hamburger-drawer" />
+      <Hamburger />
     </div>
   </header>
 );

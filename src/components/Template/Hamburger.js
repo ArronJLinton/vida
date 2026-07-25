@@ -1,67 +1,73 @@
-import React, { Suspense, lazy, useState } from 'react';
-import PropTypes from 'prop-types';
-
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
 import routes from '../../data/routes';
 
-const Menu = lazy(() => import('react-burger-menu/lib/menus/slide'));
-
-const Hamburger = ({ menuClassName = undefined }) => {
+const Hamburger = () => {
   const [open, setOpen] = useState(false);
 
-  return (
-    <div className="hamburger-container">
-      <nav className="main" id="hambuger-nav">
-        <ul>
-          {open ? (
-            <li className="menu close-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">
-                &#10005;
-              </div>
-            </li>
-          ) : (
-            <li className="menu open-menu">
-              <div onClick={() => setOpen(!open)} className="menu-hover">
-                &#9776;
-              </div>
-            </li>
-          )}
-        </ul>
-      </nav>
-      <Suspense fallback={<></>}>
-        <Menu
-          right
-          isOpen={open}
-          menuClassName={menuClassName}
-          styles={{
-            bmMenu: {
-              top: '3.5em',
-              height: 'calc(100% - 3.5em)',
-              width: 'min(100%, 22rem)',
-            },
-          }}
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', onKeyDown);
+
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [open]);
+
+  const close = () => setOpen(false);
+  const toggle = () => setOpen((prev) => !prev);
+
+  const drawer = typeof document !== 'undefined'
+    ? createPortal(
+      <>
+        <div
+          className={`site-mobile-nav__backdrop${open ? ' is-visible' : ''}`}
+          aria-hidden="true"
+          onClick={close}
+        />
+        <nav
+          id="site-mobile-nav-panel"
+          className={`site-mobile-nav__panel${open ? ' is-open' : ''}`}
+          aria-hidden={!open}
         >
-          <ul className="hamburger-ul">
-            {routes.map((l) => (
-              <li key={l.label}>
-                <Link to={l.path} onClick={() => setOpen(!open)}>
-                  <h3 className={l.index ? 'index-li' : undefined}>{l.label}</h3>
+          <ul className="site-mobile-nav__list">
+            {routes.map((route) => (
+              <li key={route.label}>
+                <Link to={route.path} onClick={close}>
+                  {route.label}
                 </Link>
               </li>
             ))}
           </ul>
-        </Menu>
-      </Suspense>
+        </nav>
+      </>,
+      document.body,
+    )
+    : null;
+
+  return (
+    <div className="site-mobile-nav">
+      <button
+        type="button"
+        className="site-mobile-nav__toggle"
+        aria-expanded={open}
+        aria-controls="site-mobile-nav-panel"
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        onClick={toggle}
+      >
+        {open ? '\u2715' : '\u2630'}
+      </button>
+      {drawer}
     </div>
   );
-};
-
-Hamburger.propTypes = {
-  menuClassName: PropTypes.string,
-};
-
-Hamburger.defaultProps = {
-  menuClassName: undefined,
 };
 
 export default Hamburger;

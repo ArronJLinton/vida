@@ -1,7 +1,7 @@
-I'm a full-stack engineer who builds at the speed of AI. I work across the entire stack — React, TypeScript, Node.js, and Go — and deeply integrate AI tooling into every stage of development, from architecture to deployment. Cursor, Claude Code, and GitHub Copilot aren't shortcuts for me — they're core to how I design systems, accelerate iteration, and ship production-ready products faster than traditional workflows allow.
+I'm a full-stack engineer and solutions architect who sits at the intersection of technology and business outcomes. I bring the technical depth to understand complex systems and the communication skills to make them resonate — whether I'm in a product scoping session, a client demo, or deep in an integration build.
 <br><br>
-I've led engineering across multiple AI-powered products, run a software agency taking ideas from 0→1, and taught hundreds of developers at the University of Washington Coding Bootcamp. That range — from building to shipping to teaching — means I understand not just how to use these tools, but how to build with them intentionally.
+I've led engineering across multiple client-facing products, run a software agency partnering with startups and businesses from 0→1, and taught hundreds of developers at the University of Washington Coding Bootcamp. That range means I've navigated every side of the table — as the builder, the technical advisor, and the person translating complexity into clarity for non-technical stakeholders.
 <br><br>
-I thrive at the frontier: where engineering rigor meets AI-native development, and where the goal isn't just working software — it's smarter, faster, better outcomes.
+I leverage AI-native tooling — Cursor, Claude Code, and GitHub Copilot — not just to ship faster, but to architect smarter solutions that scale. I thrive in roles where the work spans discovery, solutioning, and delivery: turning a customer's problem into a working system, and a working system into measurable business value.
 <br><br>
 [Let's connect →](/contact)
